@@ -53,6 +53,8 @@
     
     [[cell imageView] setImage:image];
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
 
