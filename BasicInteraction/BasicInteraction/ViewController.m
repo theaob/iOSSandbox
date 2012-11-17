@@ -23,6 +23,9 @@
      [[NSString alloc]
       initWithFormat:@"Hello, %@",
       [textField text]]];
+    
+    [textField resignFirstResponder];
+    
 }
 
 - (void)viewDidLoad
@@ -37,4 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)dismissKeyboard:(id)sender {
+    [textField resignFirstResponder];
+}
 @end

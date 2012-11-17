@@ -11,7 +11,9 @@
 @interface ViewController : UIViewController
 
 -(IBAction)changeLabel:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *theLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+- (IBAction)dismissKeyboard:(id)sender;
 
 @end
