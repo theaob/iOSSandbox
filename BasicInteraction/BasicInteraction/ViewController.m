@@ -43,4 +43,11 @@
 - (IBAction)dismissKeyboard:(id)sender {
     [textField resignFirstResponder];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self changeLabel:nil];
+    return YES;
+}
+
 @end
