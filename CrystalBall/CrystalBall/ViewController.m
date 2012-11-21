@@ -20,12 +20,14 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    self.predictionLabel.text = @"";
+    self.predictionLabel.text = nil;
+    self.predictionLabel.alpha = 0.0;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    self.predictionLabel.text = @"";
+    self.predictionLabel.text = nil;
+    self.predictionLabel.alpha = 0.0;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -79,6 +81,11 @@
 {
     [self.imageView startAnimating];
     predictionLabel.text = [self.predictionTexts objectAtIndex:arc4random_uniform([predictionTexts count])];
+    
+    [UIView animateWithDuration:2.4 animations:^{
+        self.predictionLabel.alpha = 1.0;
+    }];
+    
 }
 
 @end
