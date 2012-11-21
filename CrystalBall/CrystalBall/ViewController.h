@@ -12,5 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) NSArray * predictionTexts;
+@property (strong, nonatomic) UIImageView * imageView;
+
+- (void) makePrediction;
 
 @end

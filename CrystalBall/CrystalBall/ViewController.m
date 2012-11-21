@@ -16,6 +16,7 @@
 
 @synthesize predictionLabel;
 @synthesize predictionTexts;
+@synthesize imageView;
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
@@ -29,14 +30,14 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [predictionLabel setText:[self selectPrediontion]];
+    [self makePrediction];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if(motion == UIEventSubtypeMotionShake)
     {
-        [predictionLabel setText:[self selectPrediontion]];
+        [self makePrediction];
     }
 }
 
@@ -50,8 +51,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    UIImageView * imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
     [self.view insertSubview:imageView atIndex:0];
+    NSMutableArray * animationImages = [[NSMutableArray alloc] init];
+    for(int i = 1; i < 25; i++)
+    {
+        //NSLog();
+        if( i < 10 )
+        [animationImages addObject:[UIImage imageNamed:[NSString stringWithFormat:@"cball0000%d", i]]];
+        else
+        [animationImages addObject:[UIImage imageNamed:[NSString stringWithFormat:@"cball000%d", i]]];  
+    }
+    
+    self.imageView.animationImages = animationImages;
+    self.imageView.animationDuration = 1.0;
+    self.imageView.animationRepeatCount = 1;
     predictionTexts = [[NSArray alloc] initWithObjects:@"Ask later", @"Definately No", @"Probaby Not", @"Certainly", @"Soon", nil];
 }
 
@@ -61,9 +75,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSString *) selectPrediontion
+- (void)makePrediction
 {
-    return [self.predictionTexts objectAtIndex:arc4random_uniform([predictionTexts count])];
+    [self.imageView startAnimating];
+    predictionLabel.text = [self.predictionTexts objectAtIndex:arc4random_uniform([predictionTexts count])];
 }
 
 @end
