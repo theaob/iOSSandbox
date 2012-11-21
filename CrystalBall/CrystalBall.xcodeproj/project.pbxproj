@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		503D159E165D509C0058AB95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503D159D165D509C0058AB95 /* UIKit.framework */; };
+		503D15A0165D509C0058AB95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503D159F165D509C0058AB95 /* Foundation.framework */; };
+		503D15A2165D509C0058AB95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503D15A1165D509C0058AB95 /* CoreGraphics.framework */; };
+		503D15A8165D509C0058AB95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 503D15A6165D509C0058AB95 /* InfoPlist.strings */; };
+		503D15AA165D509C0058AB95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D15A9165D509C0058AB95 /* main.m */; };
+		503D15AE165D509C0058AB95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D15AD165D509C0058AB95 /* AppDelegate.m */; };
+		503D15B0165D509C0058AB95 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 503D15AF165D509C0058AB95 /* Default.png */; };
+		503D15B2165D509C0058AB95 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503D15B1165D509C0058AB95 /* Default@2x.png */; };
+		503D15B4165D509C0058AB95 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503D15B3165D509C0058AB95 /* Default-568h@2x.png */; };
+		503D15B7165D509C0058AB95 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503D15B5165D509C0058AB95 /* MainStoryboard.storyboard */; };
+		503D15BA165D509C0058AB95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503D15B9165D509C0058AB95 /* ViewController.m */; };
+		503D15C2165D51340058AB95 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 503D15C1165D51340058AB95 /* background.png */; };
+		503D15C4165D514C0058AB95 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503D15C3165D514C0058AB95 /* background@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		503D1599165D509C0058AB95 /* CrystalBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrystalBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		503D159D165D509C0058AB95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		503D159F165D509C0058AB95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		503D15A1165D509C0058AB95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		503D15A5165D509C0058AB95 /* CrystalBall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrystalBall-Info.plist"; sourceTree = "<group>"; };
+		503D15A7165D509C0058AB95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		503D15A9165D509C0058AB95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		503D15AB165D509C0058AB95 /* CrystalBall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrystalBall-Prefix.pch"; sourceTree = "<group>"; };
+		503D15AC165D509C0058AB95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		503D15AD165D509C0058AB95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		503D15AF165D509C0058AB95 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		503D15B1165D509C0058AB95 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		503D15B3165D509C0058AB95 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		503D15B6165D509C0058AB95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		503D15B8165D509C0058AB95 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		503D15B9165D509C0058AB95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		503D15C1165D51340058AB95 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		503D15C3165D514C0058AB95 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		503D1596165D509C0058AB95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503D159E165D509C0058AB95 /* UIKit.framework in Frameworks */,
+				503D15A0165D509C0058AB95 /* Foundation.framework in Frameworks */,
+				503D15A2165D509C0058AB95 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		503D158E165D509C0058AB95 = {
+			isa = PBXGroup;
+			children = (
+				503D15A3165D509C0058AB95 /* CrystalBall */,
+				503D159C165D509C0058AB95 /* Frameworks */,
+				503D159A165D509C0058AB95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		503D159A165D509C0058AB95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				503D1599165D509C0058AB95 /* CrystalBall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		503D159C165D509C0058AB95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				503D159D165D509C0058AB95 /* UIKit.framework */,
+				503D159F165D509C0058AB95 /* Foundation.framework */,
+				503D15A1165D509C0058AB95 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		503D15A3165D509C0058AB95 /* CrystalBall */ = {
+			isa = PBXGroup;
+			children = (
+				503D15C0165D51070058AB95 /* Images */,
+				503D15AC165D509C0058AB95 /* AppDelegate.h */,
+				503D15AD165D509C0058AB95 /* AppDelegate.m */,
+				503D15B5165D509C0058AB95 /* MainStoryboard.storyboard */,
+				503D15B8165D509C0058AB95 /* ViewController.h */,
+				503D15B9165D509C0058AB95 /* ViewController.m */,
+				503D15A4165D509C0058AB95 /* Supporting Files */,
+			);
+			path = CrystalBall;
+			sourceTree = "<group>";
+		};
+		503D15A4165D509C0058AB95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				503D15A5165D509C0058AB95 /* CrystalBall-Info.plist */,
+				503D15A6165D509C0058AB95 /* InfoPlist.strings */,
+				503D15A9165D509C0058AB95 /* main.m */,
+				503D15AB165D509C0058AB95 /* CrystalBall-Prefix.pch */,
+				503D15AF165D509C0058AB95 /* Default.png */,
+				503D15B1165D509C0058AB95 /* Default@2x.png */,
+				503D15B3165D509C0058AB95 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		503D15C0165D51070058AB95 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				503D15C3165D514C0058AB95 /* background@2x.png */,
+				503D15C1165D51340058AB95 /* background.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		503D1598165D509C0058AB95 /* CrystalBall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 503D15BD165D509C0058AB95 /* Build configuration list for PBXNativeTarget "CrystalBall" */;
+			buildPhases = (
+				503D1595165D509C0058AB95 /* Sources */,
+				503D1596165D509C0058AB95 /* Frameworks */,
+				503D1597165D509C0058AB95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrystalBall;
+			productName = CrystalBall;
+			productReference = 503D1599165D509C0058AB95 /* CrystalBall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		503D1590165D509C0058AB95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Onur Baykal";
+			};
+			buildConfigurationList = 503D1593165D509C0058AB95 /* Build configuration list for PBXProject "CrystalBall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 503D158E165D509C0058AB95;
+			productRefGroup = 503D159A165D509C0058AB95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				503D1598165D509C0058AB95 /* CrystalBall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		503D1597165D509C0058AB95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503D15A8165D509C0058AB95 /* InfoPlist.strings in Resources */,
+				503D15B0165D509C0058AB95 /* Default.png in Resources */,
+				503D15B2165D509C0058AB95 /* Default@2x.png in Resources */,
+				503D15B4165D509C0058AB95 /* Default-568h@2x.png in Resources */,
+				503D15B7165D509C0058AB95 /* MainStoryboard.storyboard in Resources */,
+				503D15C2165D51340058AB95 /* background.png in Resources */,
+				503D15C4165D514C0058AB95 /* background@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503D1595165D509C0058AB95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				503D15AA165D509C0058AB95 /* main.m in Sources */,
+				503D15AE165D509C0058AB95 /* AppDelegate.m in Sources */,
+				503D15BA165D509C0058AB95 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		503D15A6165D509C0058AB95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				503D15A7165D509C0058AB95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		503D15B5165D509C0058AB95 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				503D15B6165D509C0058AB95 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		503D15BB165D509C0058AB95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		503D15BC165D509C0058AB95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		503D15BE165D509C0058AB95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrystalBall/CrystalBall-Prefix.pch";
+				INFOPLIST_FILE = "CrystalBall/CrystalBall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		503D15BF165D509C0058AB95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrystalBall/CrystalBall-Prefix.pch";
+				INFOPLIST_FILE = "CrystalBall/CrystalBall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		503D1593165D509C0058AB95 /* Build configuration list for PBXProject "CrystalBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503D15BB165D509C0058AB95 /* Debug */,
+				503D15BC165D509C0058AB95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		503D15BD165D509C0058AB95 /* Build configuration list for PBXNativeTarget "CrystalBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				503D15BE165D509C0058AB95 /* Debug */,
+				503D15BF165D509C0058AB95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 503D1590165D509C0058AB95 /* Project object */;
+}
