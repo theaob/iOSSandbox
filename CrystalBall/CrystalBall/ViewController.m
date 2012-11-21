@@ -22,6 +22,16 @@
     self.predictionLabel.text = @"";
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.predictionLabel.text = @"";
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [predictionLabel setText:[self selectPrediontion]];
+}
+
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if(motion == UIEventSubtypeMotionShake)
@@ -49,11 +59,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)predictButton:(UIButton *)sender
-{
-    [predictionLabel setText:[self selectPrediontion]];
 }
 
 - (NSString *) selectPrediontion

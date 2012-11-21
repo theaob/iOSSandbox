@@ -13,6 +13,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) NSArray * predictionTexts;
 
-- (IBAction)predictButton:(UIButton *)sender;
-
 @end
