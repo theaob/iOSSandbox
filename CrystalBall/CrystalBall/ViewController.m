@@ -17,6 +17,24 @@
 @synthesize predictionLabel;
 @synthesize predictionTexts;
 
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    self.predictionLabel.text = @"";
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if(motion == UIEventSubtypeMotionShake)
+    {
+        [predictionLabel setText:[self selectPrediontion]];
+    }
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
