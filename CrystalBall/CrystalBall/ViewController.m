@@ -21,7 +21,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    UIImageView * imageView = [[UIImageView alloc] initWithImage:[[UIImage alloc] initWithContentsOfFile:@"background.png"]];
+    
+    UIImageView * imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]];
+    [self.view insertSubview:imageView atIndex:0];
     predictionTexts = [[NSArray alloc] initWithObjects:@"Ask later", @"Definately No", @"Probaby Not", @"Certainly", @"Soon", nil];
 }
 

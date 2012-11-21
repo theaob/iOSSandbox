@@ -21,13 +21,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-dr-YWS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-dr-YWS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ct4-Aa-FOp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Predict">
+                                <state key="normal" image="button_bg_off.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
+                                <state key="highlighted" image="button_bg_on.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -41,7 +44,6 @@
                             <constraint firstItem="XKB-fv-9g0" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="KXd-n6-0T4"/>
                             <constraint firstItem="yyY-dr-YWS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bjf-R6-2Ll"/>
                             <constraint firstAttribute="bottom" secondItem="yyY-dr-YWS" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="teb-mw-k8Z"/>
-                            <constraint firstAttribute="trailing" secondItem="yyY-dr-YWS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w7O-Fl-GWN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,6 +54,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_bg_off.png" width="280" height="42"/>
+        <image name="button_bg_on.png" width="280" height="42"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
