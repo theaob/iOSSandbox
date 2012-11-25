@@ -162,6 +162,9 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:[self managedObjectContext]];
     [fetchRequest setEntity:entity];
     
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"author == 'John DOe'"];
+    [fetchRequest setPredicate:predicate];
+    
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"releaseDate" ascending:NO];
     NSArray * sortArray = [[NSArray alloc] initWithObjects:sort, nil];
     
@@ -177,6 +180,11 @@
         for(int i = 0; i < fetchedObjects.count; i++)
         {
             NSLog(@"%@", [fetchedObjects objectAtIndex:i]);
+        }
+        
+        if([fetchedObjects count] < 1)
+        {
+            NSLog(@"Not enough result");
         }
     }
     
