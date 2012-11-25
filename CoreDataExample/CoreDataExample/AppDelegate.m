@@ -156,6 +156,27 @@
     
 }
 
+- (IBAction)fetchObjects:(id)sender {
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:[self managedObjectContext]];
+    [fetchRequest setEntity:entity];
+
+    NSError *error = nil;
+    NSArray *fetchedObjects = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        NSLog(@"Error! %@", error);
+    }
+    else
+    {
+        for(int i = 0; i < fetchedObjects.count; i++)
+        {
+            NSLog(@"%@", [fetchedObjects objectAtIndex:i]);
+        }
+    }
+    
+}
+
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     // Save changes in the application's managed object context before the application terminates.

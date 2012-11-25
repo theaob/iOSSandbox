@@ -18,5 +18,6 @@
 
 - (IBAction)saveAction:(id)sender;
 - (IBAction)buttonClicked:(id)sender;
+- (IBAction)fetchObjects:(id)sender;
 
 @end
