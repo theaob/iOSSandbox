@@ -6,17 +6,17 @@
 //  Copyright (c) 2012 Onur Baykal. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (assign) IBOutlet NSWindow *window;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+- (IBAction)saveAction:(id)sender;
+- (IBAction)buttonClicked:(id)sender;
 
 @end
