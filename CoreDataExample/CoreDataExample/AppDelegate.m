@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Course.h"
 
 @implementation AppDelegate
 
@@ -136,14 +137,21 @@
 
 - (IBAction)buttonClicked:(id)sender
 {
-    NSManagedObject * myMO = [NSEntityDescription
+    Course * myMO = (Course *)[NSEntityDescription
                               insertNewObjectForEntityForName:@"Course"
                               inManagedObjectContext:[self managedObjectContext]];
-    [myMO setValue:@"Core Data" forKey:@"title"];
-    [myMO setValue:@"John DOe" forKey:@"author"];
-    [myMO setValue:[NSDate date] forKey:@"releaseDate"];
+    myMO.title = @"OS X Core Date";
+    myMO.author = @"Simon Allardice";
+    myMO.releaseDate = [NSDate date];
     
+    [myMO simpleMethod];
     
+    NSError * error = nil;
+    
+    if(![[self managedObjectContext] save:&error] )
+    {
+        NSLog(@"Couldn't save %@", error);
+    }
     
     
 }

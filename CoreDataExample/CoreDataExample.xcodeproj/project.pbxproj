@@ -14,6 +14,7 @@
 		5059BB991662A063003C5091 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5059BB981662A063003C5091 /* AppDelegate.m */; };
 		5059BB9C1662A064003C5091 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5059BB9A1662A064003C5091 /* MainMenu.xib */; };
 		5059BB9F1662A064003C5091 /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5059BB9D1662A064003C5091 /* CoreDataExample.xcdatamodeld */; };
+		5059BBAB1662A829003C5091 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 5059BBAA1662A829003C5091 /* Course.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		5059BB981662A063003C5091 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5059BB9B1662A064003C5091 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5059BB9E1662A064003C5091 /* CoreDataExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataExample.xcdatamodel; sourceTree = "<group>"; };
+		5059BBA91662A829003C5091 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		5059BBAA1662A829003C5091 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				5059BB981662A063003C5091 /* AppDelegate.m */,
 				5059BB9A1662A064003C5091 /* MainMenu.xib */,
 				5059BB9D1662A064003C5091 /* CoreDataExample.xcdatamodeld */,
+				5059BBA91662A829003C5091 /* Course.h */,
+				5059BBAA1662A829003C5091 /* Course.m */,
 				5059BB8C1662A063003C5091 /* Supporting Files */,
 			);
 			path = CoreDataExample;
@@ -172,6 +177,7 @@
 				5059BB921662A063003C5091 /* main.m in Sources */,
 				5059BB991662A063003C5091 /* AppDelegate.m in Sources */,
 				5059BB9F1662A064003C5091 /* CoreDataExample.xcdatamodeld in Sources */,
+				5059BBAB1662A829003C5091 /* Course.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +307,7 @@
 				5059BBA41662A064003C5091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
