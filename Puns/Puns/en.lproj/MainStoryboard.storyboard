@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jj5-ET-RQZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="BsY-Pe-wYW">
+            <objects>
+                <tableViewController id="P0l-ii-boh" customClass="ListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="O8l-aj-FC6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="punCell" rowHeight="80" id="VF1-T0-SOv" customClass="PunsTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-L1-CQa">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39" id="TC2-Q6-nBl"/>
+                                                <constraint firstAttribute="width" constant="232" id="Vh7-HQ-raB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JB-Gf-4vs">
+                                            <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Lbn-k9-7gS"/>
+                                                <constraint firstAttribute="width" constant="32" id="qmg-Ax-iih"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="8JB-Gf-4vs" firstAttribute="centerY" secondItem="qwe-L1-CQa" secondAttribute="centerY" type="default" id="1VZ-1P-ujG"/>
+                                    <constraint firstItem="qwe-L1-CQa" firstAttribute="leading" secondItem="VF1-T0-SOv" secondAttribute="leading" constant="20" type="default" id="7ED-Lq-dUr"/>
+                                    <constraint firstItem="qwe-L1-CQa" firstAttribute="top" secondItem="VF1-T0-SOv" secondAttribute="top" constant="20" type="default" id="Lqs-qS-fJQ"/>
+                                    <constraint firstItem="8JB-Gf-4vs" firstAttribute="leading" secondItem="qwe-L1-CQa" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ZPf-9r-e5q"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="punLabel" destination="qwe-L1-CQa" id="w4q-wY-uWZ"/>
+                                    <outlet property="punRatingLabel" destination="8JB-Gf-4vs" id="O4u-qq-Zk8"/>
+                                    <segue destination="2dd-qa-Npe" kind="push" id="Wnk-od-ihj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P0l-ii-boh" id="khT-H0-fVe"/>
+                            <outlet property="delegate" destination="P0l-ii-boh" id="QM8-mC-ljf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7F0-aA-kQ0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taC-3q-Pej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="-180"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="p54-ZX-Wa0">
+            <objects>
+                <viewController id="2dd-qa-Npe" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KWZ-lL-oy2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yJQ-oi-gby"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgE-h0-eU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="-304"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6gM-YB-ewI">
+            <objects>
+                <navigationController id="Jj5-ET-RQZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t7T-CB-hPB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P0l-ii-boh" kind="relationship" relationship="rootViewController" id="hwh-tg-MXk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQw-va-nCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37" y="-180"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+        </class>
+        <class className="ListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PunsTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PunsTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="punLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="punRatingLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
