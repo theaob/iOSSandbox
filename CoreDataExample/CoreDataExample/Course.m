@@ -20,4 +20,9 @@
     NSLog(@"Hello!");
 }
 
+- (NSString *) description
+{
+    return [NSString stringWithFormat:@"%@ by %@", self.author, self.title];
+}
+
 @end

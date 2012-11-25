@@ -161,6 +161,11 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Course" inManagedObjectContext:[self managedObjectContext]];
     [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"releaseDate" ascending:NO];
+    NSArray * sortArray = [[NSArray alloc] initWithObjects:sort, nil];
+    
+    [fetchRequest setSortDescriptors:sortArray];
 
     NSError *error = nil;
     NSArray *fetchedObjects = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
