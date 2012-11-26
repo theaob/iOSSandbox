@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505F3F07166408B7003493F2 /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 505F3F06166408B7003493F2 /* Podcast.m */; };
 		5070FFA71663FC53008C57EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070FFA61663FC53008C57EA /* UIKit.framework */; };
 		5070FFA91663FC53008C57EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070FFA81663FC53008C57EA /* Foundation.framework */; };
 		5070FFAB1663FC53008C57EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070FFAA1663FC53008C57EA /* CoreGraphics.framework */; };
@@ -18,12 +19,13 @@
 		5070FFBD1663FC53008C57EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5070FFBC1663FC53008C57EA /* Default@2x.png */; };
 		5070FFBF1663FC53008C57EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5070FFBE1663FC53008C57EA /* Default-568h@2x.png */; };
 		5070FFC21663FC53008C57EA /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5070FFC01663FC53008C57EA /* CoreDataExample.xcdatamodeld */; };
-		5070FFCA1663FCDE008C57EA /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070FFC91663FCDE008C57EA /* Podcast.m */; };
 		5070FFCC1663FD02008C57EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070FFCB1663FD02008C57EA /* MainStoryboard.storyboard */; };
 		5070FFCF1663FE00008C57EA /* PodcastsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070FFCE1663FE00008C57EA /* PodcastsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505F3F05166408B7003493F2 /* Podcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Podcast.h; sourceTree = "<group>"; };
+		505F3F06166408B7003493F2 /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Podcast.m; sourceTree = "<group>"; };
 		5070FFA21663FC53008C57EA /* CoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070FFA61663FC53008C57EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5070FFA81663FC53008C57EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,8 +41,6 @@
 		5070FFBC1663FC53008C57EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5070FFBE1663FC53008C57EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5070FFC11663FC53008C57EA /* CoreDataExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataExample.xcdatamodel; sourceTree = "<group>"; };
-		5070FFC81663FCDE008C57EA /* Podcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Podcast.h; sourceTree = "<group>"; };
-		5070FFC91663FCDE008C57EA /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Podcast.m; sourceTree = "<group>"; };
 		5070FFCB1663FD02008C57EA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5070FFCD1663FE00008C57EA /* PodcastsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastsTableViewController.h; sourceTree = "<group>"; };
 		5070FFCE1663FE00008C57EA /* PodcastsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastsTableViewController.m; sourceTree = "<group>"; };
@@ -94,9 +94,9 @@
 			children = (
 				5070FFB71663FC53008C57EA /* AppDelegate.h */,
 				5070FFB81663FC53008C57EA /* AppDelegate.m */,
+				505F3F05166408B7003493F2 /* Podcast.h */,
+				505F3F06166408B7003493F2 /* Podcast.m */,
 				5070FFC01663FC53008C57EA /* CoreDataExample.xcdatamodeld */,
-				5070FFC81663FCDE008C57EA /* Podcast.h */,
-				5070FFC91663FCDE008C57EA /* Podcast.m */,
 				5070FFAF1663FC53008C57EA /* Supporting Files */,
 				5070FFCB1663FD02008C57EA /* MainStoryboard.storyboard */,
 				5070FFCD1663FE00008C57EA /* PodcastsTableViewController.h */,
@@ -188,8 +188,8 @@
 				5070FFB51663FC53008C57EA /* main.m in Sources */,
 				5070FFB91663FC53008C57EA /* AppDelegate.m in Sources */,
 				5070FFC21663FC53008C57EA /* CoreDataExample.xcdatamodeld in Sources */,
-				5070FFCA1663FCDE008C57EA /* Podcast.m in Sources */,
 				5070FFCF1663FE00008C57EA /* PodcastsTableViewController.m in Sources */,
+				505F3F07166408B7003493F2 /* Podcast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +298,7 @@
 				5070FFC71663FC53008C57EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

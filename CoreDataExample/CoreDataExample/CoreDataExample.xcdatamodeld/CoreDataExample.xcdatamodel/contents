@@ -5,9 +5,10 @@
         <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isPlayed" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sectionHeader" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Podcast" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Podcast" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

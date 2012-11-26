@@ -7,6 +7,7 @@
 //
 
 #import "PodcastsTableViewController.h"
+#import "Podcast.h"
 
 @interface PodcastsTableViewController ()
 
@@ -34,6 +35,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSError * error = nil;
+    
+    if( ![[self fetchResultsController] performFetch:&error])
+    {
+        NSLog(@"Error! %@", error);
+        abort();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,9 +71,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    Podcast * podcast = [self.fetchResultsController objectAtIndexPath:indexPath];
+    
+    cell.textLabel.text = [podcast.releaseDate description];
     
     return cell;
 }
+
+/*
+- (NSString * ) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [[[self.fetchResultsController sections] objectAtIndex:section] name];
+}*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -120,12 +138,13 @@
                                                   inManagedObjectContext:[self managedObjectContext]];
         [fetchRequest setEntity:entity];
         
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date"
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"releaseDate"
                                                                        ascending:YES];
+        
         NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
         [fetchRequest setSortDescriptors:sortDescriptors];
         
-        _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:_managedObjectContext sectionNameKeyPath:@"author" cacheName:nil];
         
         return _fetchResultsController;
 
