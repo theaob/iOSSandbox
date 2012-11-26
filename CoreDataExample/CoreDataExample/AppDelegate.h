@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PodcastsTableViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
