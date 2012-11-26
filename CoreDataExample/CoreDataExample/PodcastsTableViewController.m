@@ -14,6 +14,8 @@
 
 @implementation PodcastsTableViewController
 
+@synthesize fetchResultsController = _fetchResultsController;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -44,16 +46,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return [[self.fetchResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[self.fetchResultsController sections] objectAtIndex:section] numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,6 +104,33 @@
     return YES;
 }
 */
+
+#pragma mark - Fetched Results Controller Section
+
+- (NSFetchedResultsController *) fetchResultsController
+{
+    if( _fetchResultsController != nil )
+    {
+        return _fetchResultsController;
+    }
+    else
+    {
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Podcast"
+                                                  inManagedObjectContext:[self managedObjectContext]];
+        [fetchRequest setEntity:entity];
+        
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date"
+                                                                       ascending:YES];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+        [fetchRequest setSortDescriptors:sortDescriptors];
+        
+        _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+        
+        return _fetchResultsController;
+
+    }
+}
 
 #pragma mark - Table view delegate
 
